@@ -44,9 +44,6 @@ app.post('/log', jsonParser, async function (req, res) {
 
     // create /var/logs first
     const path = '/var/logs/happystore'
-    fs.mkdir(path, { recursive: true }, (err) => {
-        if (err) throw err;
-    });
 
     const logFile = path + "/" + fetchFileName(req.body.service)
     if (logFile != null) {
