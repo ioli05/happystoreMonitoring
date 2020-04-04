@@ -43,7 +43,7 @@ const fetchFileName = service => {
 app.post('/log', jsonParser, async function (req, res) {
 
     // create /var/logs first
-    const path = '/var/logs/happystore'
+    const path = '/var/log/happystore'
 
     const logFile = path + "/" + fetchFileName(req.body.service)
     if (logFile != null) {
